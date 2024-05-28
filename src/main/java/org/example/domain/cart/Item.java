@@ -1,4 +1,4 @@
-package org.example.Cart;
+package org.example.domain.cart;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package org.example.Cart;
+package org.example.domain.cart;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,12 +26,21 @@ public class Cart {
         this.total += item.getPrice();
     }
 
-    public void confirmOrder(){
-        this.status = "confirmed";
+    public boolean confirmOrder(){
+        if(validateCart()){
+            this.status = "confirmed";
+            sendConfirmationEmail();
+            return true;
+        }
+        return false;
     }
 
-    public String sendConfirmationEmail(){
-        return "Email sent";
+    public void sendConfirmationEmail(){
+        System.out.println("Email sent");
+    }
+
+    public boolean validateCart(){
+        return !this.items.isEmpty();
     }
 }
 

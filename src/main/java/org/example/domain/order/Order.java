@@ -1,10 +1,12 @@
 package org.example.domain.order;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import org.example.domain.cart.Cart;
 @Data
 @Builder
+@AllArgsConstructor
 public class Order {
     private String status;
     private Cart cart;

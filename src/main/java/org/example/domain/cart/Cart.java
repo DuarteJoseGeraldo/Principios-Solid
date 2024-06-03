@@ -9,6 +9,7 @@ import java.util.List;
 
 @Data
 @Builder
+@AllArgsConstructor
 public class Cart {
     private List<Item>items;
 

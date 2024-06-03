@@ -13,4 +13,8 @@ public class EmailService {
     private String to;
     private String title;
     private String body;
+
+    public static String sendEmail(){
+        return "Email enviado com sucesso!";
+    }
 }
